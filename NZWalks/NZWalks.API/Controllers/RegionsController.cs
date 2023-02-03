@@ -11,8 +11,8 @@ namespace NZWalks.API.Controllers
     [Route("[controller]")]
     public class RegionsController : Controller
     {
-        private IRegionRepository _regionRepository;
-        private IMapper _mapper;
+        private readonly IRegionRepository _regionRepository;
+        private readonly IMapper _mapper;
 
         public RegionsController(IRegionRepository regionRepository, IMapper mapper)
         {
