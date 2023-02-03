@@ -1,4 +1,5 @@
-﻿using NZWalks.API.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using NZWalks.API.Data;
 using NZWalks.API.Models.Domain;
 
 namespace NZWalks.API.Repostories
@@ -10,9 +11,9 @@ namespace NZWalks.API.Repostories
         {
             this._nZWalksDbContext = nZWalksDbContext;
         }
-        public IEnumerable<Region> GetAll()
+        public async Task<IEnumerable<Region>> GetAllAsync()
         {
-            return _nZWalksDbContext.Regions.ToList();
+            return await _nZWalksDbContext.Regions.ToListAsync();
         }
     }
 }

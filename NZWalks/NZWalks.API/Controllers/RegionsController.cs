@@ -20,7 +20,7 @@ namespace NZWalks.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllRegion()
+        public async Task<IActionResult> GetAllRegion()
         {
             #region return result using  static data
 
@@ -50,7 +50,7 @@ namespace NZWalks.API.Controllers
 
             #endregion
 
-            var regions = _regionRepository.GetAll();
+            var regions = await _regionRepository.GetAllAsync();
 
             #region map data into DTO object
             //   var regionsDTOs = new List<Models.Domain.Region>();
