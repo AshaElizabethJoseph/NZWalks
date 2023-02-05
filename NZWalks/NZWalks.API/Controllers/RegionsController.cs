@@ -21,7 +21,7 @@ namespace NZWalks.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllRegionAsync()
+        public async Task<IActionResult> GetAllRegionsAsync()
         {
             #region return result using  static data
 
